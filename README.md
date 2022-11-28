@@ -10,5 +10,5 @@ Install all the python dependencies
 5. pymongo
 
 
-Install node.js dependencies, using
+Install node.js dependencies, using\n
   npm install
