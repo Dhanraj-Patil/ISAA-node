@@ -3,6 +3,7 @@ ISAA J-Component
 
 
 Install all the python dependencies
+
 1. pproxy
 2. scrapy
 3. nltk
@@ -10,5 +11,5 @@ Install all the python dependencies
 5. pymongo
 
 
-Install node.js dependencies, using\n
-  npm install
+Install node.js dependencies, using
+```npm install```
