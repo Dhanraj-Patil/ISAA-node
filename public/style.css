@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap');
+* {
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+.container{
+    height: 100vh;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    background-color: rgb(75, 75, 255);
+    /* position: relative; */
+}
+
+.search-box{
+    width:100%;
+    margin-top: 100px;
+    align-items: center;
+    /* margin: auto; */
+    height: 60px;
+    position: absolute;
+}
+
+.search-bar{
+    width: 60%;
+    background-color: white;
+    border-radius: 90px;
+    height: 100%;
+    margin: auto;
+    text-align: center;
+    position: relative;
+}
+
+.box{
+    border: 0;
+    height: 100%;
+    width: 84%;
+    padding: 20px;
+    font-size:larger;
+    font-weight:600;
+    border-radius: 90px 0 0 90px;
+    float: left;
+    position: relative;
+    outline: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+.seperator{
+    height: auto;
+    width: 2%;
+    /* margin: 5px 0 5px 0; */
+    /* background-color: grey; */
+    text-align: center;
+    float: left;
+    font-size: 3em;
+    color: grey;
+}
+
+.search-btn{
+    width: 14%;
+    height: 100%;
+    float: right;
+    position: relative;
+    background-color: white;
+    border-radius: 90px;
+    border: 0;
+    box-sizing: border-box;
+    padding-right: 10px;
+    cursor: pointer;
+    font-size: larger;
+    font-weight: 500;
+    color:blue;
+    font-family: 'Poppins', sans-serif;
+}
+
+.crawl-data-container{
+    width: 100%;
+    margin-top: 260px;
+    height: 50vh;
+    position: absolute;
+}
+
+.crawl-data{
+    background-color: rgb(255, 255, 255);
+    height: 100%;
+    border-radius: 20px;
+    border: none;
+    width: 60%;
+    margin: auto;
+    padding: 10px;
+    overflow: auto;
+}
+
+#tab {
+    width: 100%;
+    border-bottom: 0.5px solid purple;
+    height: 40px;
+    line-height: 40px;
+    transition: 0.1s ease;
+    /* border-radius: 20px 20px 0 0; */
+    padding-left: 20px;
+    cursor: pointer;
+}
+
+#tab-click{
+    /* visibility: hidden; */
+    display: none;
+}
+
+#tab-sec {
+    width: 100%;
+    /* border-bottom: 0.5px solid rgb(142, 1, 142); */
+    height: 40px;
+    line-height: 40px;
+    transition: 0.1s ease;
+    /* border-radius: 20px 20px 0 0; */
+    padding-left: 20px;
+    background-color: skyblue;
+    cursor: pointer;
+}
+
+#tab:hover{
+    background-color: rgb(248, 245, 245);
+}
+
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
