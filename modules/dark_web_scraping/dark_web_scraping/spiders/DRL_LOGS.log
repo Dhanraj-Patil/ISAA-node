@@ -1,0 +1,364 @@
+INFO 2022-11-10 15:58:21,264: Scrapy 2.7.1 started (bot: dark_web_scraping)
+INFO 2022-11-10 15:58:21,361: Versions: lxml 4.9.1.0, libxml2 2.9.12, cssselect 1.2.0, parsel 1.7.0, w3lib 2.0.1, Twisted 22.10.0, Python 3.10.0 (tags/v3.10.0:b494f59, Oct  4 2021, 19:00:18) [MSC v.1929 64 bit (AMD64)], pyOpenSSL 22.1.0 (OpenSSL 3.0.7 1 Nov 2022), cryptography 38.0.3, Platform Windows-10-10.0.22623-SP0
+INFO 2022-11-10 15:58:21,366: Overridden settings:
+{'BOT_NAME': 'dark_web_scraping',
+ 'DEPTH_LIMIT': 5,
+ 'NEWSPIDER_MODULE': 'dark_web_scraping.spiders',
+ 'ROBOTSTXT_OBEY': True,
+ 'SPIDER_MODULES': ['dark_web_scraping.spiders']}
+WARNING 2022-11-10 15:58:21,370: C:\Users\dhanr\AppData\Local\Programs\Python\Python310\lib\site-packages\scrapy\utils\request.py:231: ScrapyDeprecationWarning: '2.6' is a deprecated value for the 'REQUEST_FINGERPRINTER_IMPLEMENTATION' setting.
+
+It is also the default value. In other words, it is normal to get this warning if you have not defined a value for the 'REQUEST_FINGERPRINTER_IMPLEMENTATION' setting. This is so for backward compatibility reasons, but it will change in a future version of Scrapy.
+
+See the documentation of the 'REQUEST_FINGERPRINTER_IMPLEMENTATION' setting for information on how to handle this deprecation.
+  return cls(crawler)
+
+DEBUG 2022-11-10 15:58:21,378: Using reactor: twisted.internet.selectreactor.SelectReactor
+WARNING 2022-11-10 15:58:21,399: C:\Users\dhanr\AppData\Local\Programs\Python\Python310\lib\site-packages\scrapy\extensions\feedexport.py:289: ScrapyDeprecationWarning: The `FEED_URI` and `FEED_FORMAT` settings have been deprecated in favor of the `FEEDS` setting. Please see the `FEEDS` setting docs for more details
+  exporter = cls(crawler)
+
+INFO 2022-11-10 15:58:21,406: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.feedexport.FeedExporter',
+ 'scrapy.extensions.logstats.LogStats']
+INFO 2022-11-10 15:58:21,618: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.robotstxt.RobotsTxtMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'dark_web_scraping.middlewares.RandomUserAgentMiddleware',
+ 'dark_web_scraping.middlewares.ProxyMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+INFO 2022-11-10 15:58:21,629: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'dark_web_scraping.middlewares.DarkWebScrapingSpiderMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+INFO 2022-11-10 15:58:21,818: Enabled item pipelines:
+['dark_web_scraping.pipelines.DarkWebScrapingPipeline']
+INFO 2022-11-10 15:58:21,819: Spider opened
+INFO 2022-11-10 15:58:22,167: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+INFO 2022-11-10 15:58:22,168: Spider opened: DRL
+DEBUG 2022-11-10 15:58:27,017: Attempting to acquire lock 2229733529328 on C:\Users\dhanr\AppData\Local\Programs\Python\Python310\lib\site-packages\tldextract\.suffix_cache/publicsuffix.org-tlds\de84b5ca2167d4c83e38fb162f2e8738.tldextract.json.lock
+DEBUG 2022-11-10 15:58:27,019: Lock 2229733529328 acquired on C:\Users\dhanr\AppData\Local\Programs\Python\Python310\lib\site-packages\tldextract\.suffix_cache/publicsuffix.org-tlds\de84b5ca2167d4c83e38fb162f2e8738.tldextract.json.lock
+DEBUG 2022-11-10 15:58:27,026: Attempting to release lock 2229733529328 on C:\Users\dhanr\AppData\Local\Programs\Python\Python310\lib\site-packages\tldextract\.suffix_cache/publicsuffix.org-tlds\de84b5ca2167d4c83e38fb162f2e8738.tldextract.json.lock
+DEBUG 2022-11-10 15:58:27,028: Lock 2229733529328 released on C:\Users\dhanr\AppData\Local\Programs\Python\Python310\lib\site-packages\tldextract\.suffix_cache/publicsuffix.org-tlds\de84b5ca2167d4c83e38fb162f2e8738.tldextract.json.lock
+DEBUG 2022-11-10 15:58:27,032: Crawled (200) <GET http://ciadotgov4sjwlzihbbgxnqg3xiyrg7so2r2o3lt5wz5ypk4sxyjstad.onion/robots.txt> (referer: None)
+DEBUG 2022-11-10 15:58:27,544: Redirecting (301) to <GET http://ciadotgov4sjwlzihbbgxnqg3xiyrg7so2r2o3lt5wz5ypk4sxyjstad.onion/index.html> from <GET http://ciadotgov4sjwlzihbbgxnqg3xiyrg7so2r2o3lt5wz5ypk4sxyjstad.onion/>
+DEBUG 2022-11-10 15:58:50,777: Crawled (200) <GET http://ciadotgov4sjwlzihbbgxnqg3xiyrg7so2r2o3lt5wz5ypk4sxyjstad.onion/careers/jobs> (referer: None)
+DEBUG 2022-11-10 15:58:50,966: Scraped from <200 http://ciadotgov4sjwlzihbbgxnqg3xiyrg7so2r2o3lt5wz5ypk4sxyjstad.onion/careers/jobs>
+
+ERROR 2022-11-10 15:58:50,968: Error caught on signal handler: <bound method FeedExporter.item_scraped of <scrapy.extensions.feedexport.FeedExporter object at 0x0000020724DDC3A0>>
+Traceback (most recent call last):
+  File "C:\Users\dhanr\AppData\Local\Programs\Python\Python310\lib\site-packages\scrapy\utils\defer.py", line 292, in maybeDeferred_coro
+    result = f(*args, **kw)
+  File "C:\Users\dhanr\AppData\Local\Programs\Python\Python310\lib\site-packages\pydispatch\robustapply.py", line 55, in robustApply
+    return receiver(*arguments, **named)
+  File "C:\Users\dhanr\AppData\Local\Programs\Python\Python310\lib\site-packages\scrapy\extensions\feedexport.py", line 429, in item_scraped
+    slot.exporter.export_item(item)
+  File "C:\Users\dhanr\AppData\Local\Programs\Python\Python310\lib\site-packages\scrapy\exporters.py", line 146, in export_item
+    itemdict = dict(self._get_serialized_fields(item))
+  File "C:\Users\dhanr\AppData\Local\Programs\Python\Python310\lib\site-packages\scrapy\exporters.py", line 62, in _get_serialized_fields
+    item = ItemAdapter(item)
+  File "C:\Users\dhanr\AppData\Local\Programs\Python\Python310\lib\site-packages\itemadapter\adapter.py", line 296, in __init__
+    raise TypeError(f"No adapter found for objects of type: {type(item)} ({item})")
+TypeError: No adapter found for objects of type: <class 'str'> ()
+DEBUG 2022-11-10 15:58:53,398: Crawled (200) <GET http://ciadotgov4sjwlzihbbgxnqg3xiyrg7so2r2o3lt5wz5ypk4sxyjstad.onion/careers> (referer: None)
+DEBUG 2022-11-10 15:58:53,609: Scraped from <200 http://ciadotgov4sjwlzihbbgxnqg3xiyrg7so2r2o3lt5wz5ypk4sxyjstad.onion/careers>
+
+ERROR 2022-11-10 15:58:53,612: Error caught on signal handler: <bound method FeedExporter.item_scraped of <scrapy.extensions.feedexport.FeedExporter object at 0x0000020724DDC3A0>>
+Traceback (most recent call last):
+  File "C:\Users\dhanr\AppData\Local\Programs\Python\Python310\lib\site-packages\scrapy\utils\defer.py", line 292, in maybeDeferred_coro
+    result = f(*args, **kw)
+  File "C:\Users\dhanr\AppData\Local\Programs\Python\Python310\lib\site-packages\pydispatch\robustapply.py", line 55, in robustApply
+    return receiver(*arguments, **named)
+  File "C:\Users\dhanr\AppData\Local\Programs\Python\Python310\lib\site-packages\scrapy\extensions\feedexport.py", line 429, in item_scraped
+    slot.exporter.export_item(item)
+  File "C:\Users\dhanr\AppData\Local\Programs\Python\Python310\lib\site-packages\scrapy\exporters.py", line 146, in export_item
+    itemdict = dict(self._get_serialized_fields(item))
+  File "C:\Users\dhanr\AppData\Local\Programs\Python\Python310\lib\site-packages\scrapy\exporters.py", line 62, in _get_serialized_fields
+    item = ItemAdapter(item)
+  File "C:\Users\dhanr\AppData\Local\Programs\Python\Python310\lib\site-packages\itemadapter\adapter.py", line 296, in __init__
+    raise TypeError(f"No adapter found for objects of type: {type(item)} ({item})")
+TypeError: No adapter found for objects of type: <class 'str'> ()
+DEBUG 2022-11-10 15:58:53,616: Filtered duplicate request: <GET https://www.facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion/Central.Intelligence.Agency> - no more duplicates will be shown (see DUPEFILTER_DEBUG to show all duplicates)
+DEBUG 2022-11-10 15:58:54,209: Crawled (200) <GET http://ciadotgov4sjwlzihbbgxnqg3xiyrg7so2r2o3lt5wz5ypk4sxyjstad.onion/careers/saved-jobs> (referer: None)
+DEBUG 2022-11-10 15:58:54,367: Scraped from <200 http://ciadotgov4sjwlzihbbgxnqg3xiyrg7so2r2o3lt5wz5ypk4sxyjstad.onion/careers/saved-jobs>
+
+ERROR 2022-11-10 15:58:54,369: Error caught on signal handler: <bound method FeedExporter.item_scraped of <scrapy.extensions.feedexport.FeedExporter object at 0x0000020724DDC3A0>>
+Traceback (most recent call last):
+  File "C:\Users\dhanr\AppData\Local\Programs\Python\Python310\lib\site-packages\scrapy\utils\defer.py", line 292, in maybeDeferred_coro
+    result = f(*args, **kw)
+  File "C:\Users\dhanr\AppData\Local\Programs\Python\Python310\lib\site-packages\pydispatch\robustapply.py", line 55, in robustApply
+    return receiver(*arguments, **named)
+  File "C:\Users\dhanr\AppData\Local\Programs\Python\Python310\lib\site-packages\scrapy\extensions\feedexport.py", line 429, in item_scraped
+    slot.exporter.export_item(item)
+  File "C:\Users\dhanr\AppData\Local\Programs\Python\Python310\lib\site-packages\scrapy\exporters.py", line 146, in export_item
+    itemdict = dict(self._get_serialized_fields(item))
+  File "C:\Users\dhanr\AppData\Local\Programs\Python\Python310\lib\site-packages\scrapy\exporters.py", line 62, in _get_serialized_fields
+    item = ItemAdapter(item)
+  File "C:\Users\dhanr\AppData\Local\Programs\Python\Python310\lib\site-packages\itemadapter\adapter.py", line 296, in __init__
+    raise TypeError(f"No adapter found for objects of type: {type(item)} ({item})")
+TypeError: No adapter found for objects of type: <class 'str'> ()
+DEBUG 2022-11-10 15:58:54,874: Crawled (200) <GET http://ciadotgov4sjwlzihbbgxnqg3xiyrg7so2r2o3lt5wz5ypk4sxyjstad.onion/careers/how-we-hire/> (referer: None)
+DEBUG 2022-11-10 15:58:55,058: Scraped from <200 http://ciadotgov4sjwlzihbbgxnqg3xiyrg7so2r2o3lt5wz5ypk4sxyjstad.onion/careers/how-we-hire/>
+
+ERROR 2022-11-10 15:58:55,059: Error caught on signal handler: <bound method FeedExporter.item_scraped of <scrapy.extensions.feedexport.FeedExporter object at 0x0000020724DDC3A0>>
+Traceback (most recent call last):
+  File "C:\Users\dhanr\AppData\Local\Programs\Python\Python310\lib\site-packages\scrapy\utils\defer.py", line 292, in maybeDeferred_coro
+    result = f(*args, **kw)
+  File "C:\Users\dhanr\AppData\Local\Programs\Python\Python310\lib\site-packages\pydispatch\robustapply.py", line 55, in robustApply
+    return receiver(*arguments, **named)
+  File "C:\Users\dhanr\AppData\Local\Programs\Python\Python310\lib\site-packages\scrapy\extensions\feedexport.py", line 429, in item_scraped
+    slot.exporter.export_item(item)
+  File "C:\Users\dhanr\AppData\Local\Programs\Python\Python310\lib\site-packages\scrapy\exporters.py", line 146, in export_item
+    itemdict = dict(self._get_serialized_fields(item))
+  File "C:\Users\dhanr\AppData\Local\Programs\Python\Python310\lib\site-packages\scrapy\exporters.py", line 62, in _get_serialized_fields
+    item = ItemAdapter(item)
+  File "C:\Users\dhanr\AppData\Local\Programs\Python\Python310\lib\site-packages\itemadapter\adapter.py", line 296, in __init__
+    raise TypeError(f"No adapter found for objects of type: {type(item)} ({item})")
+TypeError: No adapter found for objects of type: <class 'str'> ()
+DEBUG 2022-11-10 15:58:55,491: Crawled (200) <GET http://ciadotgov4sjwlzihbbgxnqg3xiyrg7so2r2o3lt5wz5ypk4sxyjstad.onion/careers/student-programs> (referer: None)
+DEBUG 2022-11-10 15:58:55,705: Scraped from <200 http://ciadotgov4sjwlzihbbgxnqg3xiyrg7so2r2o3lt5wz5ypk4sxyjstad.onion/careers/student-programs>
+
+ERROR 2022-11-10 15:58:55,706: Error caught on signal handler: <bound method FeedExporter.item_scraped of <scrapy.extensions.feedexport.FeedExporter object at 0x0000020724DDC3A0>>
+Traceback (most recent call last):
+  File "C:\Users\dhanr\AppData\Local\Programs\Python\Python310\lib\site-packages\scrapy\utils\defer.py", line 292, in maybeDeferred_coro
+    result = f(*args, **kw)
+  File "C:\Users\dhanr\AppData\Local\Programs\Python\Python310\lib\site-packages\pydispatch\robustapply.py", line 55, in robustApply
+    return receiver(*arguments, **named)
+  File "C:\Users\dhanr\AppData\Local\Programs\Python\Python310\lib\site-packages\scrapy\extensions\feedexport.py", line 429, in item_scraped
+    slot.exporter.export_item(item)
+  File "C:\Users\dhanr\AppData\Local\Programs\Python\Python310\lib\site-packages\scrapy\exporters.py", line 146, in export_item
+    itemdict = dict(self._get_serialized_fields(item))
+  File "C:\Users\dhanr\AppData\Local\Programs\Python\Python310\lib\site-packages\scrapy\exporters.py", line 62, in _get_serialized_fields
+    item = ItemAdapter(item)
+  File "C:\Users\dhanr\AppData\Local\Programs\Python\Python310\lib\site-packages\itemadapter\adapter.py", line 296, in __init__
+    raise TypeError(f"No adapter found for objects of type: {type(item)} ({item})")
+TypeError: No adapter found for objects of type: <class 'str'> ()
+DEBUG 2022-11-10 15:58:56,609: Crawled (200) <GET http://ciadotgov4sjwlzihbbgxnqg3xiyrg7so2r2o3lt5wz5ypk4sxyjstad.onion/careers/working-at-cia/> (referer: None)
+DEBUG 2022-11-10 15:58:56,775: Scraped from <200 http://ciadotgov4sjwlzihbbgxnqg3xiyrg7so2r2o3lt5wz5ypk4sxyjstad.onion/careers/working-at-cia/>
+
+ERROR 2022-11-10 15:58:56,789: Error caught on signal handler: <bound method FeedExporter.item_scraped of <scrapy.extensions.feedexport.FeedExporter object at 0x0000020724DDC3A0>>
+Traceback (most recent call last):
+  File "C:\Users\dhanr\AppData\Local\Programs\Python\Python310\lib\site-packages\scrapy\utils\defer.py", line 292, in maybeDeferred_coro
+    result = f(*args, **kw)
+  File "C:\Users\dhanr\AppData\Local\Programs\Python\Python310\lib\site-packages\pydispatch\robustapply.py", line 55, in robustApply
+    return receiver(*arguments, **named)
+  File "C:\Users\dhanr\AppData\Local\Programs\Python\Python310\lib\site-packages\scrapy\extensions\feedexport.py", line 429, in item_scraped
+    slot.exporter.export_item(item)
+  File "C:\Users\dhanr\AppData\Local\Programs\Python\Python310\lib\site-packages\scrapy\exporters.py", line 146, in export_item
+    itemdict = dict(self._get_serialized_fields(item))
+  File "C:\Users\dhanr\AppData\Local\Programs\Python\Python310\lib\site-packages\scrapy\exporters.py", line 62, in _get_serialized_fields
+    item = ItemAdapter(item)
+  File "C:\Users\dhanr\AppData\Local\Programs\Python\Python310\lib\site-packages\itemadapter\adapter.py", line 296, in __init__
+    raise TypeError(f"No adapter found for objects of type: {type(item)} ({item})")
+TypeError: No adapter found for objects of type: <class 'str'> ()
+DEBUG 2022-11-10 15:58:56,894: Crawled (200) <GET http://ciadotgov4sjwlzihbbgxnqg3xiyrg7so2r2o3lt5wz5ypk4sxyjstad.onion/index.html> (referer: None)
+DEBUG 2022-11-10 15:58:57,080: Scraped from <200 http://ciadotgov4sjwlzihbbgxnqg3xiyrg7so2r2o3lt5wz5ypk4sxyjstad.onion/index.html>
+
+ERROR 2022-11-10 15:58:57,081: Error caught on signal handler: <bound method FeedExporter.item_scraped of <scrapy.extensions.feedexport.FeedExporter object at 0x0000020724DDC3A0>>
+Traceback (most recent call last):
+  File "C:\Users\dhanr\AppData\Local\Programs\Python\Python310\lib\site-packages\scrapy\utils\defer.py", line 292, in maybeDeferred_coro
+    result = f(*args, **kw)
+  File "C:\Users\dhanr\AppData\Local\Programs\Python\Python310\lib\site-packages\pydispatch\robustapply.py", line 55, in robustApply
+    return receiver(*arguments, **named)
+  File "C:\Users\dhanr\AppData\Local\Programs\Python\Python310\lib\site-packages\scrapy\extensions\feedexport.py", line 429, in item_scraped
+    slot.exporter.export_item(item)
+  File "C:\Users\dhanr\AppData\Local\Programs\Python\Python310\lib\site-packages\scrapy\exporters.py", line 146, in export_item
+    itemdict = dict(self._get_serialized_fields(item))
+  File "C:\Users\dhanr\AppData\Local\Programs\Python\Python310\lib\site-packages\scrapy\exporters.py", line 62, in _get_serialized_fields
+    item = ItemAdapter(item)
+  File "C:\Users\dhanr\AppData\Local\Programs\Python\Python310\lib\site-packages\itemadapter\adapter.py", line 296, in __init__
+    raise TypeError(f"No adapter found for objects of type: {type(item)} ({item})")
+TypeError: No adapter found for objects of type: <class 'str'> ()
+DEBUG 2022-11-10 15:59:05,751: Crawled (200) <GET https://www.facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion/robots.txt> (referer: None)
+DEBUG 2022-11-10 15:59:05,766: Forbidden by robots.txt: <GET https://www.facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion/Central.Intelligence.Agency>
+INFO 2022-11-10 15:59:05,991: Closing spider (finished)
+INFO 2022-11-10 15:59:05,994: Dumping Scrapy stats:
+{'downloader/exception_count': 1,
+ 'downloader/exception_type_count/scrapy.exceptions.IgnoreRequest': 1,
+ 'downloader/request_bytes': 3379,
+ 'downloader/request_count': 10,
+ 'downloader/request_method_count/GET': 10,
+ 'downloader/response_bytes': 1920528,
+ 'downloader/response_count': 10,
+ 'downloader/response_status_count/200': 9,
+ 'downloader/response_status_count/301': 1,
+ 'dupefilter/filtered': 6,
+ 'elapsed_time_seconds': 43.825687,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2022, 11, 10, 10, 29, 5, 993084),
+ 'httpcompression/response_bytes': 13073,
+ 'httpcompression/response_count': 1,
+ 'item_scraped_count': 7,
+ 'log_count/DEBUG': 24,
+ 'log_count/ERROR': 7,
+ 'log_count/INFO': 9,
+ 'log_count/WARNING': 2,
+ 'request_depth_max': 1,
+ 'response_received_count': 9,
+ 'robotstxt/forbidden': 1,
+ 'robotstxt/request_count': 2,
+ 'robotstxt/response_count': 2,
+ 'robotstxt/response_status_count/200': 2,
+ 'scheduler/dequeued': 9,
+ 'scheduler/dequeued/memory': 9,
+ 'scheduler/enqueued': 9,
+ 'scheduler/enqueued/memory': 9,
+ 'start_time': datetime.datetime(2022, 11, 10, 10, 28, 22, 167397)}
+INFO 2022-11-10 15:59:05,997: Spider closed (finished)
+INFO 2022-11-17 12:50:51,858: Scrapy 2.7.1 started (bot: dark_web_scraping)
+INFO 2022-11-17 12:50:51,921: Versions: lxml 4.9.1.0, libxml2 2.9.12, cssselect 1.2.0, parsel 1.7.0, w3lib 2.0.1, Twisted 22.10.0, Python 3.10.0 (tags/v3.10.0:b494f59, Oct  4 2021, 19:00:18) [MSC v.1929 64 bit (AMD64)], pyOpenSSL 22.1.0 (OpenSSL 3.0.7 1 Nov 2022), cryptography 38.0.3, Platform Windows-10-10.0.22623-SP0
+INFO 2022-11-17 12:50:51,930: Overridden settings:
+{'BOT_NAME': 'dark_web_scraping',
+ 'DEPTH_LIMIT': 5,
+ 'NEWSPIDER_MODULE': 'dark_web_scraping.spiders',
+ 'ROBOTSTXT_OBEY': True,
+ 'SPIDER_MODULES': ['dark_web_scraping.spiders']}
+WARNING 2022-11-17 12:50:51,952: C:\Users\dhanr\AppData\Local\Programs\Python\Python310\lib\site-packages\scrapy\utils\request.py:231: ScrapyDeprecationWarning: '2.6' is a deprecated value for the 'REQUEST_FINGERPRINTER_IMPLEMENTATION' setting.
+
+It is also the default value. In other words, it is normal to get this warning if you have not defined a value for the 'REQUEST_FINGERPRINTER_IMPLEMENTATION' setting. This is so for backward compatibility reasons, but it will change in a future version of Scrapy.
+
+See the documentation of the 'REQUEST_FINGERPRINTER_IMPLEMENTATION' setting for information on how to handle this deprecation.
+  return cls(crawler)
+
+DEBUG 2022-11-17 12:50:52,937: Using reactor: twisted.internet.selectreactor.SelectReactor
+WARNING 2022-11-17 12:50:53,084: C:\Users\dhanr\AppData\Local\Programs\Python\Python310\lib\site-packages\scrapy\extensions\feedexport.py:289: ScrapyDeprecationWarning: The `FEED_URI` and `FEED_FORMAT` settings have been deprecated in favor of the `FEEDS` setting. Please see the `FEEDS` setting docs for more details
+  exporter = cls(crawler)
+
+INFO 2022-11-17 12:50:53,128: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.feedexport.FeedExporter',
+ 'scrapy.extensions.logstats.LogStats']
+INFO 2022-11-17 12:50:54,294: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.robotstxt.RobotsTxtMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'dark_web_scraping.middlewares.RandomUserAgentMiddleware',
+ 'dark_web_scraping.middlewares.ProxyMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+INFO 2022-11-17 12:50:54,339: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'dark_web_scraping.middlewares.DarkWebScrapingSpiderMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+INFO 2022-11-17 12:50:55,486: Enabled item pipelines:
+['dark_web_scraping.pipelines.DarkWebScrapingPipeline']
+INFO 2022-11-17 12:50:55,488: Spider opened
+INFO 2022-11-17 12:50:56,179: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+INFO 2022-11-17 12:50:56,180: Spider opened: DRL
+INFO 2022-11-17 12:51:56,180: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+DEBUG 2022-11-17 12:51:56,200: Retrying <GET http://ciadotgov4sjwlzihbbgxnqg3xiyrg7so2r2o3lt5wz5ypk4sxyjstad.onion/robots.txt> (failed 1 times): [<twisted.python.failure.Failure twisted.internet.error.ConnectionDone: Connection was closed cleanly.>]
+INFO 2022-11-17 12:52:56,192: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+DEBUG 2022-11-17 12:52:56,226: Retrying <GET http://ciadotgov4sjwlzihbbgxnqg3xiyrg7so2r2o3lt5wz5ypk4sxyjstad.onion/robots.txt> (failed 2 times): [<twisted.python.failure.Failure twisted.internet.error.ConnectionDone: Connection was closed cleanly.>]
+INFO 2022-11-17 12:53:56,189: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+ERROR 2022-11-17 12:53:56,256: Gave up retrying <GET http://ciadotgov4sjwlzihbbgxnqg3xiyrg7so2r2o3lt5wz5ypk4sxyjstad.onion/robots.txt> (failed 3 times): [<twisted.python.failure.Failure twisted.internet.error.ConnectionDone: Connection was closed cleanly.>]
+ERROR 2022-11-17 12:53:56,258: Error downloading <GET http://ciadotgov4sjwlzihbbgxnqg3xiyrg7so2r2o3lt5wz5ypk4sxyjstad.onion/robots.txt>: [<twisted.python.failure.Failure twisted.internet.error.ConnectionDone: Connection was closed cleanly.>]
+Traceback (most recent call last):
+  File "C:\Users\dhanr\AppData\Local\Programs\Python\Python310\lib\site-packages\scrapy\core\downloader\middleware.py", line 49, in process_request
+    return (yield download_func(request=request, spider=spider))
+twisted.web._newclient.ResponseNeverReceived: [<twisted.python.failure.Failure twisted.internet.error.ConnectionDone: Connection was closed cleanly.>]
+INFO 2022-11-17 12:54:56,189: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+DEBUG 2022-11-17 12:54:56,309: Retrying <GET http://ciadotgov4sjwlzihbbgxnqg3xiyrg7so2r2o3lt5wz5ypk4sxyjstad.onion/> (failed 1 times): [<twisted.python.failure.Failure twisted.internet.error.ConnectionDone: Connection was closed cleanly.>]
+DEBUG 2022-11-17 12:54:56,318: Retrying <GET http://ciadotgov4sjwlzihbbgxnqg3xiyrg7so2r2o3lt5wz5ypk4sxyjstad.onion/careers/how-we-hire/> (failed 1 times): [<twisted.python.failure.Failure twisted.internet.error.ConnectionDone: Connection was closed cleanly.>]
+DEBUG 2022-11-17 12:54:56,322: Retrying <GET http://ciadotgov4sjwlzihbbgxnqg3xiyrg7so2r2o3lt5wz5ypk4sxyjstad.onion/careers/student-programs> (failed 1 times): [<twisted.python.failure.Failure twisted.internet.error.ConnectionDone: Connection was closed cleanly.>]
+DEBUG 2022-11-17 12:54:56,326: Retrying <GET http://ciadotgov4sjwlzihbbgxnqg3xiyrg7so2r2o3lt5wz5ypk4sxyjstad.onion/careers/saved-jobs> (failed 1 times): [<twisted.python.failure.Failure twisted.internet.error.ConnectionDone: Connection was closed cleanly.>]
+DEBUG 2022-11-17 12:54:56,331: Retrying <GET http://ciadotgov4sjwlzihbbgxnqg3xiyrg7so2r2o3lt5wz5ypk4sxyjstad.onion/careers> (failed 1 times): [<twisted.python.failure.Failure twisted.internet.error.ConnectionDone: Connection was closed cleanly.>]
+DEBUG 2022-11-17 12:54:56,335: Retrying <GET http://ciadotgov4sjwlzihbbgxnqg3xiyrg7so2r2o3lt5wz5ypk4sxyjstad.onion/careers/working-at-cia/> (failed 1 times): [<twisted.python.failure.Failure twisted.internet.error.ConnectionDone: Connection was closed cleanly.>]
+DEBUG 2022-11-17 12:54:56,339: Retrying <GET http://ciadotgov4sjwlzihbbgxnqg3xiyrg7so2r2o3lt5wz5ypk4sxyjstad.onion/careers/jobs> (failed 1 times): [<twisted.python.failure.Failure twisted.internet.error.ConnectionDone: Connection was closed cleanly.>]
+INFO 2022-11-17 12:55:56,181: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+DEBUG 2022-11-17 12:55:56,489: Retrying <GET http://ciadotgov4sjwlzihbbgxnqg3xiyrg7so2r2o3lt5wz5ypk4sxyjstad.onion/careers/student-programs> (failed 2 times): [<twisted.python.failure.Failure twisted.internet.error.ConnectionDone: Connection was closed cleanly.>]
+DEBUG 2022-11-17 12:55:56,497: Retrying <GET http://ciadotgov4sjwlzihbbgxnqg3xiyrg7so2r2o3lt5wz5ypk4sxyjstad.onion/careers/how-we-hire/> (failed 2 times): [<twisted.python.failure.Failure twisted.internet.error.ConnectionDone: Connection was closed cleanly.>]
+DEBUG 2022-11-17 12:55:56,501: Retrying <GET http://ciadotgov4sjwlzihbbgxnqg3xiyrg7so2r2o3lt5wz5ypk4sxyjstad.onion/careers/saved-jobs> (failed 2 times): [<twisted.python.failure.Failure twisted.internet.error.ConnectionDone: Connection was closed cleanly.>]
+DEBUG 2022-11-17 12:55:56,505: Retrying <GET http://ciadotgov4sjwlzihbbgxnqg3xiyrg7so2r2o3lt5wz5ypk4sxyjstad.onion/careers/jobs> (failed 2 times): [<twisted.python.failure.Failure twisted.internet.error.ConnectionDone: Connection was closed cleanly.>]
+DEBUG 2022-11-17 12:55:56,509: Retrying <GET http://ciadotgov4sjwlzihbbgxnqg3xiyrg7so2r2o3lt5wz5ypk4sxyjstad.onion/careers/working-at-cia/> (failed 2 times): [<twisted.python.failure.Failure twisted.internet.error.ConnectionDone: Connection was closed cleanly.>]
+DEBUG 2022-11-17 12:55:56,512: Retrying <GET http://ciadotgov4sjwlzihbbgxnqg3xiyrg7so2r2o3lt5wz5ypk4sxyjstad.onion/careers> (failed 2 times): [<twisted.python.failure.Failure twisted.internet.error.ConnectionDone: Connection was closed cleanly.>]
+DEBUG 2022-11-17 12:55:56,517: Retrying <GET http://ciadotgov4sjwlzihbbgxnqg3xiyrg7so2r2o3lt5wz5ypk4sxyjstad.onion/> (failed 2 times): [<twisted.python.failure.Failure twisted.internet.error.ConnectionDone: Connection was closed cleanly.>]
+INFO 2022-11-17 12:56:56,184: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+ERROR 2022-11-17 12:56:56,576: Gave up retrying <GET http://ciadotgov4sjwlzihbbgxnqg3xiyrg7so2r2o3lt5wz5ypk4sxyjstad.onion/careers/student-programs> (failed 3 times): [<twisted.python.failure.Failure twisted.internet.error.ConnectionDone: Connection was closed cleanly.>]
+ERROR 2022-11-17 12:56:56,584: Gave up retrying <GET http://ciadotgov4sjwlzihbbgxnqg3xiyrg7so2r2o3lt5wz5ypk4sxyjstad.onion/careers/how-we-hire/> (failed 3 times): [<twisted.python.failure.Failure twisted.internet.error.ConnectionDone: Connection was closed cleanly.>]
+ERROR 2022-11-17 12:56:56,590: Gave up retrying <GET http://ciadotgov4sjwlzihbbgxnqg3xiyrg7so2r2o3lt5wz5ypk4sxyjstad.onion/careers/saved-jobs> (failed 3 times): [<twisted.python.failure.Failure twisted.internet.error.ConnectionDone: Connection was closed cleanly.>]
+ERROR 2022-11-17 12:56:56,593: Gave up retrying <GET http://ciadotgov4sjwlzihbbgxnqg3xiyrg7so2r2o3lt5wz5ypk4sxyjstad.onion/careers/working-at-cia/> (failed 3 times): [<twisted.python.failure.Failure twisted.internet.error.ConnectionDone: Connection was closed cleanly.>]
+ERROR 2022-11-17 12:56:56,597: Gave up retrying <GET http://ciadotgov4sjwlzihbbgxnqg3xiyrg7so2r2o3lt5wz5ypk4sxyjstad.onion/> (failed 3 times): [<twisted.python.failure.Failure twisted.internet.error.ConnectionDone: Connection was closed cleanly.>]
+ERROR 2022-11-17 12:56:56,600: Gave up retrying <GET http://ciadotgov4sjwlzihbbgxnqg3xiyrg7so2r2o3lt5wz5ypk4sxyjstad.onion/careers> (failed 3 times): [<twisted.python.failure.Failure twisted.internet.error.ConnectionDone: Connection was closed cleanly.>]
+ERROR 2022-11-17 12:56:56,604: Gave up retrying <GET http://ciadotgov4sjwlzihbbgxnqg3xiyrg7so2r2o3lt5wz5ypk4sxyjstad.onion/careers/jobs> (failed 3 times): [<twisted.python.failure.Failure twisted.internet.error.ConnectionDone: Connection was closed cleanly.>]
+ERROR 2022-11-17 12:56:56,681: Error downloading <GET http://ciadotgov4sjwlzihbbgxnqg3xiyrg7so2r2o3lt5wz5ypk4sxyjstad.onion/careers/student-programs>
+Traceback (most recent call last):
+  File "C:\Users\dhanr\AppData\Local\Programs\Python\Python310\lib\site-packages\scrapy\core\downloader\middleware.py", line 49, in process_request
+    return (yield download_func(request=request, spider=spider))
+twisted.web._newclient.ResponseNeverReceived: [<twisted.python.failure.Failure twisted.internet.error.ConnectionDone: Connection was closed cleanly.>]
+ERROR 2022-11-17 12:56:56,696: Error downloading <GET http://ciadotgov4sjwlzihbbgxnqg3xiyrg7so2r2o3lt5wz5ypk4sxyjstad.onion/careers/how-we-hire/>
+Traceback (most recent call last):
+  File "C:\Users\dhanr\AppData\Local\Programs\Python\Python310\lib\site-packages\scrapy\core\downloader\middleware.py", line 49, in process_request
+    return (yield download_func(request=request, spider=spider))
+twisted.web._newclient.ResponseNeverReceived: [<twisted.python.failure.Failure twisted.internet.error.ConnectionDone: Connection was closed cleanly.>]
+ERROR 2022-11-17 12:56:56,700: Error downloading <GET http://ciadotgov4sjwlzihbbgxnqg3xiyrg7so2r2o3lt5wz5ypk4sxyjstad.onion/careers/saved-jobs>
+Traceback (most recent call last):
+  File "C:\Users\dhanr\AppData\Local\Programs\Python\Python310\lib\site-packages\scrapy\core\downloader\middleware.py", line 49, in process_request
+    return (yield download_func(request=request, spider=spider))
+twisted.web._newclient.ResponseNeverReceived: [<twisted.python.failure.Failure twisted.internet.error.ConnectionDone: Connection was closed cleanly.>]
+ERROR 2022-11-17 12:56:56,704: Error downloading <GET http://ciadotgov4sjwlzihbbgxnqg3xiyrg7so2r2o3lt5wz5ypk4sxyjstad.onion/careers/working-at-cia/>
+Traceback (most recent call last):
+  File "C:\Users\dhanr\AppData\Local\Programs\Python\Python310\lib\site-packages\scrapy\core\downloader\middleware.py", line 49, in process_request
+    return (yield download_func(request=request, spider=spider))
+twisted.web._newclient.ResponseNeverReceived: [<twisted.python.failure.Failure twisted.internet.error.ConnectionDone: Connection was closed cleanly.>]
+ERROR 2022-11-17 12:56:56,710: Error downloading <GET http://ciadotgov4sjwlzihbbgxnqg3xiyrg7so2r2o3lt5wz5ypk4sxyjstad.onion/>
+Traceback (most recent call last):
+  File "C:\Users\dhanr\AppData\Local\Programs\Python\Python310\lib\site-packages\scrapy\core\downloader\middleware.py", line 49, in process_request
+    return (yield download_func(request=request, spider=spider))
+twisted.web._newclient.ResponseNeverReceived: [<twisted.python.failure.Failure twisted.internet.error.ConnectionDone: Connection was closed cleanly.>]
+ERROR 2022-11-17 12:56:56,714: Error downloading <GET http://ciadotgov4sjwlzihbbgxnqg3xiyrg7so2r2o3lt5wz5ypk4sxyjstad.onion/careers>
+Traceback (most recent call last):
+  File "C:\Users\dhanr\AppData\Local\Programs\Python\Python310\lib\site-packages\scrapy\core\downloader\middleware.py", line 49, in process_request
+    return (yield download_func(request=request, spider=spider))
+twisted.web._newclient.ResponseNeverReceived: [<twisted.python.failure.Failure twisted.internet.error.ConnectionDone: Connection was closed cleanly.>]
+ERROR 2022-11-17 12:56:56,717: Error downloading <GET http://ciadotgov4sjwlzihbbgxnqg3xiyrg7so2r2o3lt5wz5ypk4sxyjstad.onion/careers/jobs>
+Traceback (most recent call last):
+  File "C:\Users\dhanr\AppData\Local\Programs\Python\Python310\lib\site-packages\scrapy\core\downloader\middleware.py", line 49, in process_request
+    return (yield download_func(request=request, spider=spider))
+twisted.web._newclient.ResponseNeverReceived: [<twisted.python.failure.Failure twisted.internet.error.ConnectionDone: Connection was closed cleanly.>]
+INFO 2022-11-17 12:56:56,836: Closing spider (finished)
+INFO 2022-11-17 12:56:56,838: Dumping Scrapy stats:
+{'downloader/exception_count': 24,
+ 'downloader/exception_type_count/twisted.web._newclient.ResponseNeverReceived': 24,
+ 'downloader/request_bytes': 8394,
+ 'downloader/request_count': 24,
+ 'downloader/request_method_count/GET': 24,
+ 'elapsed_time_seconds': 360.65895,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2022, 11, 17, 7, 26, 56, 837889),
+ 'log_count/DEBUG': 17,
+ 'log_count/ERROR': 16,
+ 'log_count/INFO': 15,
+ 'log_count/WARNING': 2,
+ 'retry/count': 16,
+ 'retry/max_reached': 8,
+ 'retry/reason_count/twisted.web._newclient.ResponseNeverReceived': 16,
+ "robotstxt/exception_count/<class 'twisted.web._newclient.ResponseNeverReceived'>": 1,
+ 'robotstxt/request_count': 1,
+ 'scheduler/dequeued': 21,
+ 'scheduler/dequeued/memory': 21,
+ 'scheduler/enqueued': 21,
+ 'scheduler/enqueued/memory': 21,
+ 'start_time': datetime.datetime(2022, 11, 17, 7, 20, 56, 178939)}
+INFO 2022-11-17 12:56:56,846: Spider closed (finished)

@@ -1,0 +1,118 @@
+INFO 2022-11-18 21:07:39,663: Scrapy 2.7.1 started (bot: dark_web_scraping)
+INFO 2022-11-18 21:07:39,695: Versions: lxml 4.9.1.0, libxml2 2.9.12, cssselect 1.2.0, parsel 1.7.0, w3lib 2.0.1, Twisted 22.10.0, Python 3.10.0 (tags/v3.10.0:b494f59, Oct  4 2021, 19:00:18) [MSC v.1929 64 bit (AMD64)], pyOpenSSL 22.1.0 (OpenSSL 3.0.7 1 Nov 2022), cryptography 38.0.3, Platform Windows-10-10.0.22623-SP0
+INFO 2022-11-18 21:07:39,703: Overridden settings:
+{'BOT_NAME': 'dark_web_scraping',
+ 'DEPTH_LIMIT': 5,
+ 'NEWSPIDER_MODULE': 'dark_web_scraping.spiders',
+ 'ROBOTSTXT_OBEY': True,
+ 'SPIDER_MODULES': ['dark_web_scraping.spiders']}
+WARNING 2022-11-18 21:07:39,718: C:\Users\dhanr\AppData\Local\Programs\Python\Python310\lib\site-packages\scrapy\utils\request.py:231: ScrapyDeprecationWarning: '2.6' is a deprecated value for the 'REQUEST_FINGERPRINTER_IMPLEMENTATION' setting.
+
+It is also the default value. In other words, it is normal to get this warning if you have not defined a value for the 'REQUEST_FINGERPRINTER_IMPLEMENTATION' setting. This is so for backward compatibility reasons, but it will change in a future version of Scrapy.
+
+See the documentation of the 'REQUEST_FINGERPRINTER_IMPLEMENTATION' setting for information on how to handle this deprecation.
+  return cls(crawler)
+
+DEBUG 2022-11-18 21:07:39,765: Using reactor: twisted.internet.selectreactor.SelectReactor
+WARNING 2022-11-18 21:07:39,844: C:\Users\dhanr\AppData\Local\Programs\Python\Python310\lib\site-packages\scrapy\extensions\feedexport.py:289: ScrapyDeprecationWarning: The `FEED_URI` and `FEED_FORMAT` settings have been deprecated in favor of the `FEEDS` setting. Please see the `FEEDS` setting docs for more details
+  exporter = cls(crawler)
+
+INFO 2022-11-18 21:07:39,867: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.feedexport.FeedExporter',
+ 'scrapy.extensions.logstats.LogStats']
+INFO 2022-11-18 21:07:40,216: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.robotstxt.RobotsTxtMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'dark_web_scraping.middlewares.RandomUserAgentMiddleware',
+ 'dark_web_scraping.middlewares.ProxyMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+INFO 2022-11-18 21:07:40,239: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'dark_web_scraping.middlewares.DarkWebScrapingSpiderMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+INFO 2022-11-18 21:07:41,710: Enabled item pipelines:
+['dark_web_scraping.pipelines.DarkWebScrapingPipeline']
+INFO 2022-11-18 21:07:41,711: Spider opened
+INFO 2022-11-18 21:07:42,103: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+INFO 2022-11-18 21:07:42,104: Spider opened: DRL
+INFO 2022-11-18 21:08:42,115: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+DEBUG 2022-11-18 21:08:42,117: Retrying <GET http://ciadotgov4sjwlzihbbgxnqg3xiyrg7so2r2o3lt5wz5ypk4sxyjstad.onion/robots.txt> (failed 1 times): [<twisted.python.failure.Failure twisted.internet.error.ConnectionDone: Connection was closed cleanly.>]
+INFO 2022-11-18 21:09:42,107: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+DEBUG 2022-11-18 21:09:42,141: Retrying <GET http://ciadotgov4sjwlzihbbgxnqg3xiyrg7so2r2o3lt5wz5ypk4sxyjstad.onion/robots.txt> (failed 2 times): [<twisted.python.failure.Failure twisted.internet.error.ConnectionDone: Connection was closed cleanly.>]
+INFO 2022-11-18 21:10:42,108: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+ERROR 2022-11-18 21:10:42,158: Gave up retrying <GET http://ciadotgov4sjwlzihbbgxnqg3xiyrg7so2r2o3lt5wz5ypk4sxyjstad.onion/robots.txt> (failed 3 times): [<twisted.python.failure.Failure twisted.internet.error.ConnectionDone: Connection was closed cleanly.>]
+ERROR 2022-11-18 21:10:42,159: Error downloading <GET http://ciadotgov4sjwlzihbbgxnqg3xiyrg7so2r2o3lt5wz5ypk4sxyjstad.onion/robots.txt>: [<twisted.python.failure.Failure twisted.internet.error.ConnectionDone: Connection was closed cleanly.>]
+Traceback (most recent call last):
+  File "C:\Users\dhanr\AppData\Local\Programs\Python\Python310\lib\site-packages\scrapy\core\downloader\middleware.py", line 49, in process_request
+    return (yield download_func(request=request, spider=spider))
+twisted.web._newclient.ResponseNeverReceived: [<twisted.python.failure.Failure twisted.internet.error.ConnectionDone: Connection was closed cleanly.>]
+INFO 2022-11-18 21:11:42,106: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+DEBUG 2022-11-18 21:11:42,186: Retrying <GET http://ciadotgov4sjwlzihbbgxnqg3xiyrg7so2r2o3lt5wz5ypk4sxyjstad.onion/> (failed 1 times): [<twisted.python.failure.Failure twisted.internet.error.ConnectionDone: Connection was closed cleanly.>]
+DEBUG 2022-11-18 21:12:35,280: Attempting to acquire lock 2232706656640 on C:\Users\dhanr\AppData\Local\Programs\Python\Python310\lib\site-packages\tldextract\.suffix_cache/publicsuffix.org-tlds\de84b5ca2167d4c83e38fb162f2e8738.tldextract.json.lock
+DEBUG 2022-11-18 21:12:35,284: Lock 2232706656640 acquired on C:\Users\dhanr\AppData\Local\Programs\Python\Python310\lib\site-packages\tldextract\.suffix_cache/publicsuffix.org-tlds\de84b5ca2167d4c83e38fb162f2e8738.tldextract.json.lock
+DEBUG 2022-11-18 21:12:35,308: Attempting to release lock 2232706656640 on C:\Users\dhanr\AppData\Local\Programs\Python\Python310\lib\site-packages\tldextract\.suffix_cache/publicsuffix.org-tlds\de84b5ca2167d4c83e38fb162f2e8738.tldextract.json.lock
+DEBUG 2022-11-18 21:12:35,309: Lock 2232706656640 released on C:\Users\dhanr\AppData\Local\Programs\Python\Python310\lib\site-packages\tldextract\.suffix_cache/publicsuffix.org-tlds\de84b5ca2167d4c83e38fb162f2e8738.tldextract.json.lock
+DEBUG 2022-11-18 21:12:35,313: Redirecting (301) to <GET http://ciadotgov4sjwlzihbbgxnqg3xiyrg7so2r2o3lt5wz5ypk4sxyjstad.onion/index.html> from <GET http://ciadotgov4sjwlzihbbgxnqg3xiyrg7so2r2o3lt5wz5ypk4sxyjstad.onion/>
+INFO 2022-11-18 21:12:42,118: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+DEBUG 2022-11-18 21:12:58,460: Crawled (200) <GET http://ciadotgov4sjwlzihbbgxnqg3xiyrg7so2r2o3lt5wz5ypk4sxyjstad.onion/index.html> (referer: None)
+DEBUG 2022-11-18 21:12:58,680: Scraped from <200 http://ciadotgov4sjwlzihbbgxnqg3xiyrg7so2r2o3lt5wz5ypk4sxyjstad.onion/index.html>
+
+ERROR 2022-11-18 21:12:58,681: Error caught on signal handler: <bound method FeedExporter.item_scraped of <scrapy.extensions.feedexport.FeedExporter object at 0x00000207D725CA30>>
+Traceback (most recent call last):
+  File "C:\Users\dhanr\AppData\Local\Programs\Python\Python310\lib\site-packages\scrapy\utils\defer.py", line 292, in maybeDeferred_coro
+    result = f(*args, **kw)
+  File "C:\Users\dhanr\AppData\Local\Programs\Python\Python310\lib\site-packages\pydispatch\robustapply.py", line 55, in robustApply
+    return receiver(*arguments, **named)
+  File "C:\Users\dhanr\AppData\Local\Programs\Python\Python310\lib\site-packages\scrapy\extensions\feedexport.py", line 429, in item_scraped
+    slot.exporter.export_item(item)
+  File "C:\Users\dhanr\AppData\Local\Programs\Python\Python310\lib\site-packages\scrapy\exporters.py", line 146, in export_item
+    itemdict = dict(self._get_serialized_fields(item))
+  File "C:\Users\dhanr\AppData\Local\Programs\Python\Python310\lib\site-packages\scrapy\exporters.py", line 62, in _get_serialized_fields
+    item = ItemAdapter(item)
+  File "C:\Users\dhanr\AppData\Local\Programs\Python\Python310\lib\site-packages\itemadapter\adapter.py", line 296, in __init__
+    raise TypeError(f"No adapter found for objects of type: {type(item)} ({item})")
+TypeError: No adapter found for objects of type: <class 'str'> ()
+INFO 2022-11-18 21:12:58,698: Closing spider (finished)
+INFO 2022-11-18 21:12:58,699: Dumping Scrapy stats:
+{'downloader/exception_count': 4,
+ 'downloader/exception_type_count/twisted.web._newclient.ResponseNeverReceived': 4,
+ 'downloader/request_bytes': 2038,
+ 'downloader/request_count': 6,
+ 'downloader/request_method_count/GET': 6,
+ 'downloader/response_bytes': 364504,
+ 'downloader/response_count': 2,
+ 'downloader/response_status_count/200': 1,
+ 'downloader/response_status_count/301': 1,
+ 'elapsed_time_seconds': 316.595769,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2022, 11, 18, 15, 42, 58, 698456),
+ 'item_scraped_count': 1,
+ 'log_count/DEBUG': 11,
+ 'log_count/ERROR': 3,
+ 'log_count/INFO': 14,
+ 'log_count/WARNING': 2,
+ 'response_received_count': 1,
+ 'retry/count': 3,
+ 'retry/max_reached': 1,
+ 'retry/reason_count/twisted.web._newclient.ResponseNeverReceived': 3,
+ "robotstxt/exception_count/<class 'twisted.web._newclient.ResponseNeverReceived'>": 1,
+ 'robotstxt/request_count': 1,
+ 'scheduler/dequeued': 3,
+ 'scheduler/dequeued/memory': 3,
+ 'scheduler/enqueued': 3,
+ 'scheduler/enqueued/memory': 3,
+ 'start_time': datetime.datetime(2022, 11, 18, 15, 37, 42, 102687)}
+INFO 2022-11-18 21:12:58,701: Spider closed (finished)
